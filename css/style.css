@@ -1,0 +1,120 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body{
+ 
+    font-size: 16px;
+}
+
+header{
+    background-image: url(../img/4OIG\ \(1\).png);
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+header nav{
+    height: 70px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono{
+    display: none;
+}
+
+.enlaces{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.enlaces a{
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 4px 0;
+    transition: 0.7s ease-out;
+    color: #27cd3d;
+    text-decoration: none;
+}
+
+.enlaces a:hover, .active{
+    border-top: 2px solid rgb(100, 255, 80);
+    border-bottom: 2px solid rgb(227, 74, 18);
+
+}
+
+nav .logo{
+    height: 100%;
+    background: #fff;
+    margin-left: 80px;
+}
+
+nav .logo img{
+    object-fit: cover;
+    height: inherit;
+}
+
+
+header .textos{
+    text-align: center;
+    color: #03ea22;
+    margin-top: 150px;
+}
+
+header .textos h1{
+    font-size: 95px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+header .textos h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:750px) {
+    
+   .icono{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    color: #fff;
+    background: coral;
+    padding: 20px;
+    z-index: 100;
+    cursor: pointer;
+    margin-right: 40px;
+   } 
+
+   header .textos h1{
+     font-size: 75px; 
+   }
+
+   .enlaces{
+     position: fixed;
+     height: 100vh;
+     flex-direction: column;
+     transition: all 1s ease;
+     background: #000000;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+   }
+
+   .uno{
+    clip-path: circle(130% at 100% 0%);
+   }
+}
