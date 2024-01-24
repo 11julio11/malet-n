@@ -9,6 +9,8 @@ body{
     font-size: 16px;
 }
 
+/*estilos para el menu*/
+
 header{
     background-image: url(../img/4OIG\ \(1\).png);
     width: 100%;
@@ -93,7 +95,7 @@ header .textos h2{
     height: 70px;
     align-items: center;
     color: #fff;
-    background: coral;
+    background: transparent;
     padding: 20px;
     z-index: 100;
     cursor: pointer;
@@ -107,6 +109,8 @@ header .textos h2{
    .enlaces{
      position: fixed;
      height: 100vh;
+     right: 0;
+     width: 100%;
      flex-direction: column;
      transition: all 1s ease;
      background: #000000;  /* fallback for old browsers */
@@ -115,6 +119,26 @@ header .textos h2{
    }
 
    .uno{
-    clip-path: circle(130% at 100% 0%);
+    clip-path: circle(0% at 100% 0%);
+    -webkit-clip-path: circle(0% at 100% 0%)
    }
+
+   .dos{
+    clip-path: circle(150% at 100% 0%);
+    -webkit-clip-path: circle(150% at 100 0%)
+   }
+}
+
+
+@media screen and  (max-width:400px){
+    nav .logo{
+        margin-left: 20px;
+    }
+    .icono{
+        margin-right: 20px;
+    }
+
+    header .textos h1 {
+        font-size: 65px;
+    }
 }

@@ -16,6 +16,7 @@
           "-webkit-mask-clip"
         ]
       }
-    ]
+    ],
+    "css-prefix-order": "off"
   }
 }
