@@ -5,26 +5,26 @@
 }
 
 body{
- 
-    font-size: 16px;
+    font-family: 'Helvetica', sans-serif;
 }
 
 /*estilos para el menu*/
 
 header{
-    background-image: url(../img/4OIG\ \(1\).png);
+    background-image: url();
     width: 100%;
     height: 730px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+  
 }
 
 header nav{
     height: 70px;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #fa0202;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92089c, #f2062d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d31085, #0ca8e1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     justify-content: space-between;
 }
@@ -42,18 +42,19 @@ header nav{
 }
 
 .enlaces a{
+    font-weight: bold;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     padding: 4px 0;
     transition: 0.7s ease-out;
-    color: #27cd3d;
+    color: #c4097f;
     text-decoration: none;
 }
 
 .enlaces a:hover, .active{
-    border-top: 2px solid rgb(100, 255, 80);
-    border-bottom: 2px solid rgb(227, 74, 18);
-
+    border-top: 4px solid rgb(219, 2, 208);
+    border-bottom: 4px solid rgb(227, 18, 150);
+    color: #02ff02;
 }
 
 nav .logo{
@@ -70,8 +71,13 @@ nav .logo img{
 
 header .textos{
     text-align: center;
-    color: #03ea22;
+    text-shadow: 0 0 10px #0ca8e1, 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ff00de;
+    color: rgb(4, 4, 4);
     margin-top: 150px;
+}
+
+header .textos:hover{
+    color: #0ca8e1;
 }
 
 header .textos h1{
@@ -81,11 +87,41 @@ header .textos h1{
     margin-bottom: 10px;
 }
 
+.textos h1, .textos h2 {
+    overflow: hidden;
+    border-right: .15em solid rgb(227, 18, 150); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 4.5s steps(40, end) forwards, /* Add 'forwards' to keep the typed text on screen */
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100%; border-right: none; } /* Remove the cursor at the end */
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(219, 2, 208); }
+  }
+
 
 header .textos h2{
     font-size: 30px;
     font-weight: 600;
 }
+
+video{
+    width: 80%;
+}
+
+
+
 
 @media screen and (max-width:750px) {
     
@@ -113,9 +149,9 @@ header .textos h2{
      width: 100%;
      flex-direction: column;
      transition: all 1s ease;
-     background: #000000;  /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+     background: #fa0202;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92089c, #f2062d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d31085, #0ca8e1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    }
 
    .uno{
@@ -142,3 +178,8 @@ header .textos h2{
         font-size: 65px;
     }
 }
+
+
+/*sections*/
+
+

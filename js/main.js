@@ -21,3 +21,4 @@ window.addEventListener('resize',function(){
       enlaces.className = ('enlaces uno')
     }
 })
+
