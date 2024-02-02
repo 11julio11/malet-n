@@ -8,23 +8,23 @@
   scroll-behavior: smooth;
 }
 
-/* Custom Scroll Bar CSS */
+/* Barra de desplazamiento personalizada CSS */
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-    background: #6e93f7;
+    background: #29c406;
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #4070f4;
+    background: #30eb26;
 }
-/* navbar styling */
+/* estilo de la barra de navegación */
 nav{
   position: fixed;
   width: 100%;
@@ -34,7 +34,7 @@ nav{
   font-family: 'Ubuntu', sans-serif;
 }
 nav.sticky{
-  background: #4070f4;
+  background: #000000;
   padding: 13px 0;
 }
 nav .navbar{
@@ -47,10 +47,10 @@ nav .navbar{
 nav .navbar .logo a{
   font-weight: 500;
   font-size: 35px;
-  color: #4070f4;
+  color: #08b70e;
 }
 nav.sticky .navbar .logo a{
-  color: #fff;
+  color: #08b70e;
 }
 nav .navbar .menu{
   display: flex;
@@ -63,33 +63,34 @@ nav .navbar .menu li{
 .navbar .menu a{
   font-size: 18px;
   font-weight: 500;
-  color: #0E2431;
+  color: #000000;
   padding: 6px 0;
   transition: all 0.4s ease;
 }
 .navbar .menu a:hover{
-  color: #4070f4;
+  color: #08b70e;
 }
 nav.sticky .menu a{
-  color: #FFF;
+  color: #08b70e;
 }
 nav.sticky .menu a:hover{
-  color: #0E2431;
+  color: #f8f8f8;
 }
 .navbar .media-icons a{
-  color: #4070f4;
+  color: #08b70e;
   font-size: 18px;
   margin: 0 6px;
 }
 nav.sticky .media-icons a{
-  color: #FFF;
+  color: #fffbfb;
 }
 
-/* Side Navigation Menu Button CSS */
+
+/* Botón de menú de navegación lateral CSS */
 nav .menu-btn,
 .navbar .menu .cancel-btn{
   position: absolute;
-  color: #fff;
+  color: #08b70e;
   right: 30px;
   top: 20px;
   font-size: 20px;
@@ -98,20 +99,20 @@ nav .menu-btn,
   display: none;
 }
 nav .menu-btn{
-  color: #4070f4;
+  color: #08b70e;
 }
 nav.sticky .menu-btn{
-  color: #FFF;
+  color: #ffffff;
 }
 .navbar .menu .menu-btn{
-  color: #fff;
+  color: #e00d0d;
 }
 
-/* home section styling */
+/* estilo de la sección de inicio */
 .home{
   height: 100vh;
   width: 100%;
-  background: url("images/background.png") no-repeat;
+  background: () no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -127,10 +128,10 @@ nav.sticky .menu-btn{
 }
 .home .text-one{
   font-size: 25px;
-  color: #0E2431;
+  color: #08b70e;
 }
 .home .text-two{
-  color: #0E2431;
+  color: #000000;
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
@@ -138,12 +139,12 @@ nav.sticky .menu-btn{
 .home .text-three{
   font-size: 40px;
   margin: 5px 0;
-  color: #4070f4;
+  color: #000000;
 }
 .home .text-four{
   font-size: 23px;
   margin: 5px 0;
-  color: #0E2431;
+  color: #08b70e;
 }
 .home .button{
   margin: 14px 0;
@@ -154,21 +155,21 @@ nav.sticky .menu-btn{
   border-radius: 6px;
   font-size: 25px;
   font-weight: 400;
-  background: #4070f4;
-  color: #fff;
+  background: #000000;
+  color: #19b105;
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.4s ease;
 }
 .home .button button:hover{
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
+  border-color: #0ba61f;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* About Section Styling */
-/* Those Elements Where We Have Apply Same CSS,
- I'm Selecting Directly 'Section Tag' and 'Class'  */
+/* Acerca del estilo de sección */
+/* Aquellos elementos donde aplicamos el mismo CSS,
+  Estoy seleccionando directamente 'Etiqueta de sección' y 'Clase' */
 section{
   padding-top: 40px;
 }
@@ -188,7 +189,7 @@ section .title{
   margin-bottom: 40px;
 }
 section .title span{
-  color: #0E2431;
+  color: #08b70e;
   font-size: 30px;
   font-weight: 600;
   position: relative;
@@ -200,7 +201,7 @@ section .title span::after{
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #4070f4;
+  background: #000000;
   left: 0;
   bottom: 0;
 }
@@ -223,14 +224,14 @@ section .title span::after{
   width: 55%;
 }
 section  .topic{
-  color: #0E2431;
+  color: #08b70e;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 .about-details .right p{
   text-align: justify;
-  color: #0E2431;
+  color: #000000;
 }
 section .button{
   margin: 16px 0;
@@ -241,21 +242,21 @@ section .button button{
   border-radius: 4px;
   font-size: 25px;
   font-weight: 400;
-  background: #4070f4;
-  color: #fff;
+  background: #000000;
+  color: #33ce08;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 section .button button:hover{
-  border-color: #4070f4;
+  border-color: #ecedf0;
   background-color: #fff;
-  color: #4070f4;
+  color: #08b70e;
 }
 
- /* My Skills CSS */
+ /* mis habilidades CSS */
  .skills{
-   background: #F0F8FF;
+   background: #000000;
  }
  .skills .content{
    padding: 40px 0;
@@ -269,7 +270,7 @@ section .button button:hover{
    width: 50%;
  }
  .skills-details p{
-   color: #0E2431;
+   color: #f5f5f5;
    text-align: justify;
  }
 .skills .skills-details .experience{
@@ -278,11 +279,11 @@ section .button button:hover{
   margin: 0 10px;
 }
 .skills-details .experience .num{
-  color: #0E2431;
+  color: #ffffff;
   font-size: 80px;
 }
 .skills-details .experience .exp{
-  color: #0E2431;
+  color: #08b70e;
   margin-left: 20px;
   font-size: 18px;
   font-weight: 500;
@@ -300,14 +301,14 @@ section .button button:hover{
 }
 .skills-details .boxes .topic{
   font-size: 20px;
-  color: #4070f4;
+  color: #08b70e;
 }
 .skills-details .boxes .per{
   font-size: 60px;
-  color: #4070f4;
+  color: #fffefe;
 }
 
-/* My Services CSS */
+/* Mis proyectos */
 .services .boxes{
   display: flex;
   flex-wrap: wrap;
@@ -324,13 +325,13 @@ section .button button:hover{
   transition: all 0.4s ease;
 }
 .services .boxes .box:hover{
-  background: #4070f4;
-  color: #fff;
+  background: #070707;
+  color: #fbfcfa;
 }
 .services .boxes .box .icon{
   height: 50px;
   width: 50px;
-  background: #4070f4;
+  background: #000000;
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
@@ -341,11 +342,11 @@ section .button button:hover{
 }
 .boxes .box:hover .icon{
   background-color: #fff;
-  color: #4070f4;
+  color: #08b70e;
 }
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p{
-  color: #0E2431;
+  color: #08b70e;
   transition: all 0.4s ease;
 }
 .services .boxes .box:hover .topic,
@@ -368,7 +369,7 @@ section .button button:hover{
 
 /* Footer CSS */
 footer{
-  background: #4070f4;
+  background: #000000;
   padding: 15px 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -376,7 +377,7 @@ footer{
 footer .text span{
   font-size: 17px;
   font-weight: 400;
-  color: #fff;
+  color: #08b70e;
 }
 footer .text span a{
   font-weight: 500;
@@ -391,7 +392,7 @@ footer .text span a:hover{
   bottom: 20px;
   right: 20px;
   color: #fff;
-  background: #4070f4;
+  background: #08b70e;
   padding: 7px 12px;;
   font-size: 18px;
   border-radius: 6px;
@@ -439,7 +440,7 @@ footer .text span a:hover{
     position: fixed;
     left: -100%;
     top: 0;
-    background: #0E2431;
+    background: #000000;
     height: 100vh;
     max-width: 400px;
     width: 100%;
@@ -454,11 +455,11 @@ footer .text span a:hover{
   nav .navbar .menu a{
     font-size: 23px;
     display: block;
-    color: #fff;
+    color: #07f107;
     margin: 10px 0;
   }
   nav.sticky .menu a:hover{
-    color: #4070f4;
+    color: #ffffff;
   }
   nav .navbar .media-icons{
     display: none;
@@ -505,6 +506,6 @@ footer .text span a:hover{
   }
   .skills-details .boxes .per{
     font-size: 50px;
-    color: #4070f4;
+    color: #f3eded;
   }
 }
