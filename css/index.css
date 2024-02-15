@@ -112,7 +112,7 @@ nav.sticky .menu-btn{
 .home{
   height: 100vh;
   width: 100%;
-  background: url(../img/OIG.png) no-repeat;
+  background: url() no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -171,6 +171,8 @@ nav.sticky .menu-btn{
   background-color: #ffffff;
   color: #000000;
 }
+
+/*estilos para el video*/
 
 /* Acerca del estilo de sección */
 /* Aquellos elementos donde aplicamos el mismo CSS,
