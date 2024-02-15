@@ -377,7 +377,8 @@ section .button button:hover{
 /* Footer CSS */
 footer{
   background: #000000;
-  padding: 15px 0;
+  padding: 20px ;
+  height: 50px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
