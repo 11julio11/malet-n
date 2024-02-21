@@ -517,3 +517,35 @@ footer .text span a:hover{
     color: #f3eded;
   }
 }
+
+/*estilos para eñ boton contacto*/
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+p {
+  margin-bottom: 15px;
+  color: #07f107;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+.block {
+  margin-bottom: 20px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2db300;
+}

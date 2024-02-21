@@ -30,9 +30,9 @@
           </div>
         </ul>
         <div class="media-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="menu-btn">
@@ -43,6 +43,7 @@
     <!-- Home Section Start -->
     <section class="home" id="home">
       <div class="home-content">
+        
         <div class="text">
           <div class="text-one">Hola,</div>
           <div class="text-two">Soy David</div>
@@ -66,11 +67,13 @@
           <div class="right">
             <div class="topic">Diseñar es mi pasión</div>
             <p>Soy un apasionado diseñador web con experiencia en HTML, CSS, JavaScript y Bootstrap. Me especializo en la creación de sitios web responsivos que no solo se ven bien en todos los dispositivos, sino que también se adaptan a las necesidades únicas de cada usuario. Mi objetivo es crear experiencias digitales que sean atractivas, intuitivas y accesibles para todos.</p>
+
             <div class="button">
-              <a href="pdf/CV_Jesus David Julio Romero.pdf">
-                <button>Download CV</button>
+              <a id="download-cv-link" href="/pdf/CV_Jesus David Julio Romero.pdf" target="_blank>
+                <button id="download-cv-button">Download CV</button>
               </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -120,20 +123,29 @@
       <div class="content">
         <div class="title"><span>Proyectos</span></div>
         <div class="boxes">
+
           <div class="box">
             <div class="icon">
               <i class="fas fa-desktop"></i>
             </div>
-            <div class="topic">Web Devlopment</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
+            <a href="https://fascinating-maamoul-634cbd.netlify.app/" target="_blank">
+            <div class="topic">CRUD</div>
+            <p>Su funcion es la introduccion de informacion de cualquier individuo donde se puede anexar , editar y eliminar </p>
+            </a>
           </div>
+
           <div class="box">
             <div class="icon">
               <i class="fas fa-paint-brush"></i>
             </div>
-            <div class="topic">Graphic Design</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
+            <a href="https://resilient-dango-b0ad9d.netlify.app/" target="_blank">
+            <div class="topic">ROBLE`S STORE</div>
+            <p>Tienda online que se basa en la venta de productos hechos en roble y con la responsabilidad de brindar una buena usabilidad al cliente.</p>
+            </a>
           </div>
+
+
+             <!--
           <div class="box">
             <div class="icon">
               <i class="fas fa-chart-line"></i>
@@ -155,6 +167,7 @@
             <div class="topic">Photography</div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
           </div>
+
           <div class="box">
             <div class="icon">
               <i class="fas fa-tablet-alt"></i>
@@ -162,6 +175,7 @@
             <div class="topic">Apps Devlopment</div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
           </div>
+           -->
         </div>
       </div>
     </section>
@@ -171,10 +185,47 @@
       <div class="content">
         <div class="title"><span>Contacto</span></div>
         <div class="text">
-          <div class="topic">Have Any Project?</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam neque ipsum corrupti dolores, facere numquam voluptate aspernatur sit perferendis qui nisi modi! Recusandae deserunt consequatur voluptatibus alias repellendus nobis eligendi.</p>
+          <div class="topic">¿Tiene algún proyecto?</div>
+          <p>¿Estás buscando dar vida a tu próximo proyecto? ¡Estás en el lugar correcto! Como desarrollador apasionado y dedicado, me encanta tener la oportunidad de transformar ideas en realidad. Mi portfolio es un reflejo de mi rango de habilidades y experiencia. Si te gusta lo que ves y tienes un proyecto en mente, no dudes en contactarme. ¡Estoy listo para llevar tus ideas al siguiente nivel! ¡Hagamos algo grandioso juntos!</p>
           <div class="button">
-            <button>Let's Chat</button>
+             <h3>Charlemos</h3> <br><br>
+              <form action="https://formsubmit.co/romerojesusdavid76@gmail.com" method="POST" />
+              <p>
+                  <label>Nombres  y Apellidos</label>
+                  <input type="text" name="fullname">
+              </p>
+
+              <p>
+                  <label>Correo Electronico</label>
+                  <input type="email" name="email">
+              </p>
+
+              <p>
+                  <label>Numero de Telefono</label>
+                  <input type="tel" id="phone" name="phone" oninput="addprefix(this)">
+              </p>
+
+              <p>
+                  <label>Asunto</label>
+                  <input type="text" name="affair">
+              </p>
+
+              <p class="block">
+                 <label>Mensaje</label> 
+                  <textarea name="message" rows="3"></textarea>
+              </p>
+
+              
+
+              <input type="hidden" name="_next" value="">
+              <input type="hidden" name="_captcha" value="false">
+
+              <p class="block">
+                  <button type="submit">
+                      Enviar
+                  </button>
+              </p>
+          </form>
           </div>
         </div>
       </div>

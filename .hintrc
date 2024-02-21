@@ -19,6 +19,19 @@
     ],
     "css-prefix-order": "off",
     "no-inline-styles": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "disown-opener": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
+    ]
   }
 }
