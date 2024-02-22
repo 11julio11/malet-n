@@ -126,13 +126,17 @@ nav.sticky .menu-btn{
   flex-direction: column;
   justify-content: center;
 }
+
 .home .text-one{
   font-size: 25px;
+  position: relative;
   color: #ffffff;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #0ba61f, 0 0 30px #ffffff, 0 0 40px #0ba61f;
 }
 .home .text-two{
   color: #fffefe;
+  position: relative;
+  z-index: 2;
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
@@ -141,17 +145,23 @@ nav.sticky .menu-btn{
 .home .text-three{
   font-size: 40px;
   margin: 5px 0;
+  position: relative;
+  z-index: 2;
   color: #ffffff;
   font-size: large;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #0ba61f, 0 0 30px #ffffff, 0 0 40px #0ba61f;
 }
 .home .text-four{
+  position: relative;
+  z-index: 2;
   font-size: 23px;
   margin: 5px 0;
   color: #f0f5f0;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #0ba61f, 0 0 30px #ffffff, 0 0 40px #0ba61f;
 }
 .home .button{
+  position: relative;
+  z-index: 2;
   margin: 14px 0;
 }
 .home .button button{
@@ -173,6 +183,15 @@ nav.sticky .menu-btn{
 }
 
 /*estilos para el video*/
+video{
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+}
 
 /* Acerca del estilo de sección */
 /* Aquellos elementos donde aplicamos el mismo CSS,
