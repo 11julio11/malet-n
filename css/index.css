@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 /* Barra de desplazamiento personalizada CSS */
@@ -47,10 +48,12 @@ nav .navbar{
 nav .navbar .logo a{
   font-weight: 500;
   font-size: 35px;
+  text-decoration: none;
   color: #08b70e;
 }
 nav.sticky .navbar .logo a{
   color: #08b70e;
+  text-decoration: none;
 }
 nav .navbar .menu{
   display: flex;
@@ -63,6 +66,7 @@ nav .navbar .menu li{
 .navbar .menu a{
   font-size: 18px;
   font-weight: 500;
+  text-decoration: none;
   color: #f6f4f4;
   padding: 6px 0;
   transition: all 0.4s ease;
@@ -130,6 +134,7 @@ nav.sticky .menu-btn{
 .home .text-one{
   font-size: 25px;
   position: relative;
+  z-index: 2;
   color: #ffffff;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #0ba61f, 0 0 30px #ffffff, 0 0 40px #0ba61f;
 }
@@ -338,7 +343,6 @@ section .button button:hover{
 .services .boxes{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .services .boxes .box{
   margin: 20px 0;
