@@ -44,51 +44,54 @@ for (var i = 0; i < navLinks.length; i++) {
   });
 }
 
-
-//funcion de proteccion de cv
+//funcionamiento del cv
 const express = require('express');
 const app = express();
 const fs = require('fs');
 const path = require('path');
 
-const DOWNLOAD_LIMIT = 1;
+const DOWNLOAD_LIMIT = 2;
 const DOWNLOADS_FILE = path.join(__dirname, 'downloads.json');
 
+// Función para obtener las descargas registradas
 function getDownloads() {
-  let downloads;
   try {
     const rawData = fs.readFileSync(DOWNLOADS_FILE);
-    downloads = JSON.parse(rawData);
+    return JSON.parse(rawData);
   } catch (err) {
-    downloads = {};
+    // Si hay un error al leer el archivo o el archivo no existe, se retorna un objeto vacío
+    return {};
   }
-  return downloads;
 }
 
+// Función para guardar las descargas registradas
 function saveDownloads(downloads) {
   const data = JSON.stringify(downloads, null, 2);
   fs.writeFileSync(DOWNLOADS_FILE, data);
 }
 
-app.get('/pdf/CV_Jesus David Julio Romero.pdf', (req, res) => {
+// Ruta para descargar el CV
+app.get('/pdf/CV_Jesus_David_Julio_Romero.pdf', (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   const downloads = getDownloads();
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const companyDownloads = downloads[ip] || { count: 0, timestamp: Date.now() };
 
   if (companyDownloads.count >= DOWNLOAD_LIMIT) {
-    res.status(403).send('Download limit reached for your company.');
+    res.status(403).send('Límite de descargas alcanzado para su empresa.');
     return;
   }
 
   const filePath = path.join(__dirname, 'pdf', 'CV_Jesus_David_Julio_Romero.pdf');
-  res.download(filePath, 'CV_Jesus_David_Julio_Romero.pdf');
-
-  companyDownloads.count++;
-  companyDownloads.timestamp = Date.now();
-  downloads[ip] = companyDownloads;
-  saveDownloads(downloads);
+  res.download(filePath, 'CV_Jesus_David_Julio_Romero.pdf', () => {
+    // Incrementar el contador de descargas después de que se haya completado la descarga
+    companyDownloads.count++;
+    companyDownloads.timestamp = Date.now();
+    downloads[ip] = companyDownloads;
+    saveDownloads(downloads);
+  });
 });
 
+// Ruta de inicio
 app.get('/', (req, res) => {
   res.send(`
     <html>
@@ -97,8 +100,8 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <div class="button">
-          <a id="download-cv-link" href="/pdf/CV_Jesus David Julio Romero.pdf">
-            <button id="download-cv-button">Download CV</button>
+          <a id="download-cv-link" href="/pdf/CV_Jesus_David_Julio_Romero.pdf">
+            <button id="download-cv-button">Descargar CV</button>
           </a>
         </div>
         <script>
@@ -110,10 +113,9 @@ app.get('/', (req, res) => {
             button.disabled = true;
           });
 
-          //Agregue un mensaje de advertencia para intentos de descarga de terceros
           link.addEventListener('click', (event) => {
             if (event.which !== 1) {
-              alert('Third-party download attempts are not allowed.');
+              alert('No se permiten intentos de descarga de terceros.');
               event.preventDefault();
             }
           });
@@ -123,7 +125,9 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+// Iniciar el servidor en el puerto 3000
+app.listen(5500, () => {
+  console.log('Servidor escuchando en el puerto 5500');
 });
+
 

@@ -9,6 +9,7 @@
   text-decoration: none;
 }
 
+
 /* Barra de desplazamiento personalizada CSS */
 ::-webkit-scrollbar {
     width: 10px;
@@ -400,13 +401,14 @@ section .button button:hover{
 /* Footer CSS */
 footer{
   background: #000000;
-  padding: 20px ;
+  padding: 50px ;
   height: 50px;
+  margin-top: auto;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 footer .text span{
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   color: #08b70e;
 }
@@ -416,6 +418,7 @@ footer .text span a{
 }
 footer .text span a:hover{
   text-decoration: underline;
+  color: #09d509;
 }
 /* Scroll TO Top Button CSS */
 .scroll-button a{
@@ -564,7 +567,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
 }
 button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #000000;
   color: white;
   border: none;
   cursor: pointer;
