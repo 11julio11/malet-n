@@ -50,18 +50,18 @@ for (var i = 0; i < navLinks.length; i++) {
 
 //---------------------------------funcionamiento del cv --------------------------//
 // Importación de módulos necesarios
-const express = require('express'); // Importa Express, un framework web para Node.js
+import express from 'express'; // Importa Express, un framework web para Node.js
 const app = express(); // Crea una instancia de la aplicación Express
-const fs = require('fs'); // Importa el módulo 'fs' para trabajar con el sistema de archivos
-const path = require('path'); // Importa el módulo 'path' para manejar rutas de archivos
+import { readFileSync, writeFileSync } from 'fs'; // Importa el módulo 'fs' para trabajar con el sistema de archivos
+import { join } from 'path'; // Importa el módulo 'path' para manejar rutas de archivos
 
 // Definición de constantes
-const DOWNLOADS_FILE = path.join(__dirname, 'downloads.json'); // Ruta del archivo para guardar registros de descargas
+const DOWNLOADS_FILE = join(__dirname, 'downloads.json'); // Ruta del archivo para guardar registros de descargas
 
 // Función para obtener las descargas registradas
 function getDownloads() {
   try {
-    const rawData = fs.readFileSync(DOWNLOADS_FILE); // Lee el archivo de registros de descargas
+    const rawData = readFileSync(DOWNLOADS_FILE); // Lee el archivo de registros de descargas
     return JSON.parse(rawData); // Parsea el contenido del archivo JSON
   } catch (err) {
     // Si hay un error al leer el archivo o el archivo no existe, se retorna un objeto vacío
@@ -72,7 +72,7 @@ function getDownloads() {
 // Función para guardar las descargas registradas
 function saveDownloads(downloads) {
   const data = JSON.stringify(downloads, null, 2); // Convierte los registros de descargas a formato JSON
-  fs.writeFileSync(DOWNLOADS_FILE, data); // Escribe los registros en el archivo
+  writeFileSync(DOWNLOADS_FILE, data); // Escribe los registros en el archivo
 }
 
 // Ruta para descargar el CV
@@ -86,7 +86,7 @@ app.get('/pdf/CV_Jesus_David_Julio_Romero.pdf', (req, res) => {
     return;
   }
 
-  const filePath = path.join(__dirname, 'pdf', 'CV_Jesus_David_Julio_Romero.pdf'); // Ruta del archivo CV
+  const filePath = join(__dirname, 'pdf', 'CV_Jesus_David_Julio_Romero.pdf'); // Ruta del archivo CV
   res.download(filePath, 'CV_Jesus_David_Julio_Romero.pdf', () => {
     // Descarga el archivo CV y luego ejecuta esta función de devolución de llamada
     // Registra la descarga una vez que se ha completado
