@@ -34,9 +34,9 @@ cancelBtn.onclick = function(){
   scrollBtn.style.pointerEvents = "auto";
 }
 
-// Side Navigation Bar Close While We Click On Navigation Links
-let navLinksMenu = document.querySelectorAll(".menu li a");
-for (var i = 0; i < navLinksMenu.length; i++) {
+// Cierre de la barra de navegación lateral cuando hacemos clic en los enlaces de navegación
+let navLinksMenu = document.querySelectorAll(".navbar li a");
+for (let i = 0; i < navLinksNavbar.length; i++) {
   navLinksMenu[i].addEventListener("click" , function() {
     navBar.classList.remove("active");
     menuBtn.style.opacity = "1";

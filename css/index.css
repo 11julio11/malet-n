@@ -40,6 +40,7 @@ nav.sticky{
   padding: 13px 0;
 }
 nav .navbar{
+  display: none;
   width: 90%;
   display: flex;
   justify-content: space-between;
