@@ -3,48 +3,46 @@ let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
 
 window.onscroll = function() {
-  if(document.documentElement.scrollTop > 20){
+  if (document.documentElement.scrollTop > 20) {
     nav.classList.add("sticky");
     scrollBtn.style.display = "block";
-  }else{
+  } else {
     nav.classList.remove("sticky");
     scrollBtn.style.display = "none";
   }
-}
+};
 
-// Side NavIgation Menu JS Code
+// Side Navigation Menu JS Code
 let body = document.querySelector("body");
 let navBar = document.querySelector(".navbar");
 let menuBtn = document.querySelector(".menu-btn");
 let cancelBtn = document.querySelector(".cancel-btn");
 
-menuBtn.onclick = function(){
+menuBtn.onclick = function() {
   navBar.classList.add("active");
   menuBtn.style.opacity = "0";
   menuBtn.style.pointerEvents = "none";
   body.style.overflow = "hidden";
-  scrollBtn.style.pointerEvents = "none";
-}
+};
 
-cancelBtn.onclick = function(){
+cancelBtn.onclick = function() {
   navBar.classList.remove("active");
   menuBtn.style.opacity = "1";
   menuBtn.style.pointerEvents = "auto";
   body.style.overflow = "auto";
-  scrollBtn.style.pointerEvents = "auto";
-}
+};
 
 // Cierre de la barra de navegación lateral cuando hacemos clic en los enlaces de navegación
 let navLinksMenu = document.querySelectorAll(".navbar li a");
-for (let i = 0; i < navLinksNavbar.length; i++) {
-  navLinksMenu[i].addEventListener("click" , function() {
+for (let i = 0; i < navLinksMenu.length; i++) {
+  navLinksMenu[i].addEventListener("click", function() {
     navBar.classList.remove("active");
     menuBtn.style.opacity = "1";
     menuBtn.style.pointerEvents = "auto";
     body.style.overflow = "auto";
-    scrollBtn.style.pointerEvents = "auto";
   });
-}
+};
+
 
 
 //---------------------------------funcionamiento del cv --------------------------//
