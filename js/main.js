@@ -32,6 +32,8 @@ cancelBtn.onclick = function() {
   body.style.overflow = "auto";
 };
 
+
+
 // Cierre de la barra de navegación lateral cuando hacemos clic en los enlaces de navegación
 let navLinksMenu = document.querySelectorAll(".navbar li a");
 for (let i = 0; i < navLinksMenu.length; i++) {

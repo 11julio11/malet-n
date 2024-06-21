@@ -9,6 +9,11 @@
   scroll-behavior: smooth;
 }
 
+body{
+  font-family: 'tangerine', serif;
+  font-size: 48px;
+}
+
 
 /* Barra de desplazamiento personalizada CSS */
 ::-webkit-scrollbar {
