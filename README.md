@@ -1,1 +1,1 @@
-stio oficial https://mimaletin.netlify.app/
+sitio web oficial https://mimaletin.netlify.app/
