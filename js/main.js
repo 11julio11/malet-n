@@ -1,57 +1,58 @@
-// Mostrar/Ocultar Botón de Desplazamiento al Inicio
-let scrollButton = document.querySelector(".scroll-button a");
+// Sticky Navigation Menu JS Code
+let nav = document.querySelector("nav");
+let scrollBtn = document.querySelector(".scroll-button a");
+console.log(scrollBtn);
+let val;
 window.onscroll = function() {
-  if (document.documentElement.scrollTop > 20) {
-    scrollButton.style.display = "block";
-  } else {
-    scrollButton.style.display = "none";
+  if(document.documentElement.scrollTop > 20){
+    nav.classList.add("sticky");
+    scrollBtn.style.display = "block";
+  }else{
+    nav.classList.remove("sticky");
+    scrollBtn.style.display = "none";
   }
-};
 
-// Código adicional para el menú de navegación para que funcione lo seleccionado
+}
+
+//-----------------------------menu de  navegacion---------------------------//
+
+// Side NavIgation Menu JS Code
 let body = document.querySelector("body");
 let navBar = document.querySelector(".navbar");
 let menuBtn = document.querySelector(".menu-btn");
 let cancelBtn = document.querySelector(".cancel-btn");
-let menuLinks = document.querySelectorAll(".menu a");
-
-menuBtn.onclick = function() {
+menuBtn.onclick = function(){
   navBar.classList.add("active");
   menuBtn.style.opacity = "0";
   menuBtn.style.pointerEvents = "none";
   body.style.overflow = "hidden";
-  if (scrollButton) scrollButton.style.pointerEvents = "none";
-};
-
-cancelBtn.onclick = function() {
+  scrollBtn.style.pointerEvents = "none";
+}
+cancelBtn.onclick = function(){
   navBar.classList.remove("active");
   menuBtn.style.opacity = "1";
   menuBtn.style.pointerEvents = "auto";
   body.style.overflow = "auto";
-  if (scrollButton) scrollButton.style.pointerEvents = "auto";
-};
+  scrollBtn.style.pointerEvents = "auto";
+}
 
-// Ocultar el menú al hacer clic en cualquier enlace del menú
-menuLinks.forEach(link => {
-  link.onclick = function() {
+
+
+// Side Navigation Bar Close While We Click On Navigation Links
+let navLinks = document.querySelectorAll(".menu li a");
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click" , function() {
     navBar.classList.remove("active");
     menuBtn.style.opacity = "1";
     menuBtn.style.pointerEvents = "auto";
-    body.style.overflow = "auto";
-    if (scrollButton) scrollButton.style.pointerEvents = "auto";
-  };
-});
-
-//------------------------------------------funcionamiento del cv ------------------------------------//
-
-
+  });
+}
 
 // Importación de módulos necesarios
 import express from 'express'; // Importa Express, un framework web para Node.js
 const app = express(); // Crea una instancia de la aplicación Express
-import { readFileSync, writeFileSync } from 'fs'; // Importa el módulo 'fs' para trabajar con el sistema de archivos
-import { join } from 'path'; // Importa el módulo 'path' para manejar rutas de archivos
-import { post } from 'axios'; // Importa Axios para hacer solicitudes HTTP
+const fs = require('fs'); // Importa el módulo 'fs' para trabajar con el sistema de archivos
+const path = require('path'); // Importa el módulo 'path' para manejar rutas de archivos
 
 // Definición de constantes
 const DOWNLOADS_FILE = join(__dirname, 'downloads.json'); // Ruta del archivo para guardar registros de descargas
@@ -84,33 +85,13 @@ app.get('/pdf/CV_Jesus_David_Julio_Romero.pdf', (req, res) => {
     return;
   }
 
-  // Verificar si el token de reCAPTCHA está presente y válido en la solicitud
-  const recaptchaToken = req.query.token;
-  if (!recaptchaToken) {
-    res.status(400).send('No se proporcionó el token de reCAPTCHA.');
-    return;
-  }
-
-  // Verificar el token de reCAPTCHA usando la API de Google
-  const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=TU_SECRET_KEY&response=${recaptchaToken}`;
-  post(verifyUrl)
-    .then(response => {
-      if (response.data.success) {
-        const filePath = join(__dirname, 'pdf', 'CV_Jesus_David_Julio_Romero.pdf'); // Ruta del archivo CV
-        res.download(filePath, 'CV_Jesus_David_Julio_Romero.pdf', () => {
-          // Descarga el archivo CV y luego ejecuta esta función de devolución de llamada
-          // Registra la descarga una vez que se ha completado
-          downloads[ip] = true; // Registra la descarga para la dirección IP actual
-          saveDownloads(downloads); // Guarda los registros actualizados en el archivo
-        });
-      } else {
-        res.status(403).send('Falló la verificación de reCAPTCHA.');
-      }
-    })
-    .catch(error => {
-      console.error('Error al verificar reCAPTCHA:', error);
-      res.status(500).send('Error interno del servidor al verificar reCAPTCHA.');
-    });
+  const filePath = path.join(__dirname, 'pdf', 'CV_Jesus_David_Julio_Romero.pdf'); // Ruta del archivo CV
+  res.download(filePath, 'CV_Jesus_David_Julio_Romero.pdf', () => {
+    // Descarga el archivo CV y luego ejecuta esta función de devolución de llamada
+    // Registra la descarga una vez que se ha completado
+    downloads[ip] = true; // Registra la descarga para la dirección IP actual
+    saveDownloads(downloads); // Guarda los registros actualizados en el archivo
+  });
 });
 
 // Ruta de inicio
