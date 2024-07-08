@@ -95,8 +95,8 @@ nav .menu-btn,
 .navbar .menu .cancel-btn{
   position: absolute;
   color: #08b70e;
-  right: 30px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -433,6 +433,15 @@ footer .text span a:hover{
   display: none;
 }
 
+.scroll-button a {
+  text-decoration: none;
+  font-size: 24px;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
 /* Responsive Media Query */
 @media (max-width: 1190px) {
   section .content{
@@ -468,6 +477,7 @@ footer .text span a:hover{
 @media (max-width: 750px) {
   nav .navbar{
     width: 90%;
+    display: block;
   }
   nav .navbar .menu{
     position: fixed;
