@@ -1,17 +1,11 @@
 /* Google Font CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-}
-
-body{
-  font-family: 'tangerine', serif;
-  font-size: 48px;
 }
 
 
@@ -45,7 +39,6 @@ nav.sticky{
   padding: 13px 0;
 }
 nav .navbar{
-  display: none; 
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -102,8 +95,8 @@ nav .menu-btn,
 .navbar .menu .cancel-btn{
   position: absolute;
   color: #08b70e;
-  right: 10px;
-  top: 10px;
+  right: 30px;
+  top: 20px;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -433,20 +426,12 @@ footer .text span a:hover{
   right: 20px;
   color: #fff;
   background: #08b70e;
-  padding: 7px 12px;;
+  padding: 10px 15px;;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.15);
   display: none;
-}
-
-.scroll-button a {
-  text-decoration: none;
-  font-size: 24px;
-  background: #333;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 50%;
+  z-index: 1000;
 }
 
 /* Responsive Media Query */
@@ -484,7 +469,6 @@ footer .text span a:hover{
 @media (max-width: 750px) {
   nav .navbar{
     width: 90%;
-    display: block;
   }
   nav .navbar .menu{
     position: fixed;
