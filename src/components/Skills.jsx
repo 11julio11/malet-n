@@ -16,14 +16,14 @@ function Skills() {
                 <div className="title"><span>Mis habilidades</span></div>
                 <div className="skills-details">
                     <div className="text">
-                        <div className="topic">Innovación y Tecnología</div>
+                        <div className="topic">Crecimiento y Aprendizaje</div>
                         <p>
-                            Mi stack tecnológico abarca desde el desarrollo frontend con React, TypeScript y Tailwind CSS,
-                            hasta el backend con PostgreSQL y la gestión de contenedores con Docker. Utilizo herramientas
-                            profesionales como Postman e Insomnia para pruebas de API, y frameworks modernos como Vite para
-                            optimizar el rendimiento. Mi experiencia incluye desarrollo de aplicaciones web completas, desde
-                            el diseño de interfaces responsivas hasta la implementación de bases de datos relacionales y
-                            despliegue en producción.
+                            Mi stack tecnológico es la base de mi aprendizaje estratégico.
+                            Me enfoco en dominar profundamente el ecosistema de JavaScript para crear interfaces
+                            interactivas y backends eficientes.
+                            Estoy en constante exploración de nuevas librerías y frameworks, perfeccionando mi capacidad para
+                            resolver problemas y optimizar procesos, siempre con la curiosidad de descubrir cómo llevar mis
+                            habilidades al siguiente nivel.
                         </p>
                     </div>
                     <div className="boxes">

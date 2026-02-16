@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 function Contact() {
     const [phone, setPhone] = useState('')
+    const [status, setStatus] = useState('')
 
     const handlePhoneInput = (e) => {
         let value = e.target.value
@@ -9,6 +10,34 @@ function Contact() {
             value = '+57' + value.replace(/^\+57/, '')
         }
         setPhone(value)
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const form = e.target
+        const formData = new FormData(form)
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+
+            if (response.ok) {
+                setStatus('¡Mensaje enviado con éxito!')
+                form.reset()
+                setPhone('+57')
+            } else {
+                setStatus('Hubo un error al enviar el mensaje.')
+            }
+        } catch (error) {
+            setStatus('Error de conexión.')
+        }
+
+        setTimeout(() => setStatus(''), 5000)
     }
 
     return (
@@ -26,8 +55,20 @@ function Contact() {
                     </p>
                     <div className="button">
                         <h3>Charlemos</h3>
-                        <br /><br />
-                        <form action="https://formsubmit.co/romerojesusdavid76@gmail.com" method="POST">
+                        {status && (
+                            <div className="status-message" style={{
+                                color: status.includes('éxito') ? '#08b70e' : '#ff4d4d',
+                                marginBottom: '20px',
+                                fontFamily: 'Orbitron, sans-serif'
+                            }}>
+                                {status}
+                            </div>
+                        )}
+                        <form
+                            action="https://formsubmit.co/ajax/romerojesusdavid76@gmail.com"
+                            method="POST"
+                            onSubmit={handleSubmit}
+                        >
                             <p>
                                 <label>Nombres  y Apellidos</label>
                                 <input type="text" name="fullname" />

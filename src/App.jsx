@@ -7,11 +7,12 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import MatrixBackground from './components/MatrixBackground'
 
 function App() {
     return (
-        <>
-            <ScrollToTop />
+        <div className="App">
+            <MatrixBackground />
             <Navbar />
             <Hero />
             <About />
@@ -19,7 +20,8 @@ function App() {
             <Projects />
             <Contact />
             <Footer />
-        </>
+            <ScrollToTop />
+        </div>
     )
 }
 

@@ -8,14 +8,15 @@ function About() {
                         <img src="/img/diseño01.jpg" alt="Profile" />
                     </div>
                     <div className="right">
-                        <div className="topic">El desarrollo web es mi pasión</div>
+                        <div className="topic">Desarrollador Junior en Formación Continua</div>
                         <p>
-                            Soy un desarrollador web full-stack con experiencia en la creación de aplicaciones modernas
-                            utilizando React, TypeScript y Tailwind CSS. Mi expertise abarca desde el diseño de interfaces
-                            responsivas hasta la implementación de backends con PostgreSQL y la gestión de contenedores con
-                            Docker. Trabajo con herramientas profesionales como Postman e Insomnia para pruebas de API, y
-                            utilizo Vite para optimizar el rendimiento de mis aplicaciones. Mi objetivo es crear productos
-                            digitales escalables, eficientes y con las mejores prácticas de la industria.
+                            Soy un desarrollador junior apasionado por la tecnología y con un fuerte enfoque en aprender
+                            y aplicar las mejores prácticas del desarrollo web.
+                            Me especializo en trabajar tanto en el **Frontend como en el Backend**, construyendo proyectos que
+                            me permiten fortalecer mis habilidades día a día.
+                            Actualmente manejo herramientas modernas como **React, TypeScript, Docker y PostgreSQL**, y busco
+                            constantemente nuevos retos que me permitan crecer profesionalmente y aportar soluciones útiles
+                            y creativas en cada línea de código.
                         </p>
                     </div>
                 </div>
