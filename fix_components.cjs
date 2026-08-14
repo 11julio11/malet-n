@@ -39,7 +39,7 @@ if (fs.existsSync(heroPath)) {
     heroContent = heroContent.replace(/(Hola, soy)<\/div>/g, '$1</p>');
 
     heroContent = heroContent.replace(/<div className="text-2".*?>/g, '<h1 className="text-2 title">');
-    heroContent = heroContent.replace(/(David Julio R\.)<\/div>/g, '$1</h1>');
+    heroContent = heroContent.replace(/(Jesus David Julio Romero\.)<\/div>/g, '$1</h1>');
     
     heroContent = heroContent.replace(/<div className="text-3".*?>/g, '<h2 className="text-3 typed-role">');
     heroContent = heroContent.replace(/(<span className="typing">.*?<\/span>)<\/div>/g, '$1</h2>');

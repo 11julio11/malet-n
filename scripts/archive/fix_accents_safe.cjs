@@ -10,10 +10,10 @@ function About() {
                 <div className="title"><span>Sobre m&iacute;</span></div>
                 <div className="about-details">
                     <div className="left">
-                        <img src="/img/profile2.jpg" alt="David Julio R." style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+                        <img src="/img/profile2.jpg" alt="Jesus David Julio Romero." style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px", display: "block" }} />
                     </div>
                     <div className="right">
-                        <div className="topic scroll-animate">Desarrollador Backend con Python y Go</div>
+                        <div className="topic scroll-animate">Backend Developer</div>
                         <p className="scroll-animate">
                             Enfocado en la implementaci&oacute;n de l&oacute;gica de negocio, automatizaci&oacute;n de procesos y trabajo con
                             bases de datos PostgreSQL. Cuento con experiencia real en el desarrollo y mantenimiento de

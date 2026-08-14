@@ -11,19 +11,19 @@ function About() {
                 <div className="title"><span>Sobre mi</span></div>
                 <div className="about-details">
                     <div className="left">
-                        <img src="/img/profile2.jpg" alt="David Julio R." style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+                        <img src="/img/profile2.jpg" alt="Jesus David Julio Romero." style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px", display: "block" }} />
                     </div>
                     <div className="right">
-                        <div className="topic scroll-animate">Desarrollador Backend con Python y Go</div>
+                        <div className="topic scroll-animate">Backend Developer</div>
                         <p className="scroll-animate">
-                            Enfocado en la implementación de lógica de negocio, automatización de procesos y trabajo con
+                            Enfocado en la implementaciï¿½n de lï¿½gica de negocio, automatizaciï¿½n de procesos y trabajo con
                             bases de datos PostgreSQL. Cuento con experiencia real en el desarrollo y mantenimiento de
                             sistemas empresariales del sector financiero (como LINIX ERP y sistemas Core Banking), aplicando
-                            siempre buenas prácticas y Clean Architecture.
+                            siempre buenas prï¿½cticas y Clean Architecture.
                             <br/><br/>
-                            Complemento mi perfil backend con conocimientos sólidos en Frontend (React, TypeScript),
+                            Complemento mi perfil backend con conocimientos sï¿½lidos en Frontend (React, TypeScript),
                             lo que me permite participar en soluciones web completas de extremo a extremo. Me caracterizo
-                            por mi capacidad de adaptación, aprendizaje continuo y trabajo colaborativo en entornos reales.
+                            por mi capacidad de adaptaciï¿½n, aprendizaje continuo y trabajo colaborativo en entornos reales.
                         </p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const ArchitectureModal = ({ isOpen, onClose }) => {
                 <div className="arch-modal-body">
                     
                     <h2 className="glitch-hover" data-text="Clean Architecture">Clean Architecture</h2>
-                    <p className="arch-desc">> Separación de responsabilidades y capas independientes.</p>
+                    <p className="arch-desc">> Separaciï¿½n de responsabilidades y capas independientes.</p>
                     <div className="arch-details" style={{marginBottom: '2rem'}}>
                         <div className="code-line"><span className="line-num">1</span><span><span className="code-keyword">import</span> { '{ CoreBusinessRules }' } <span className="code-keyword">from</span> <span className="code-string">"@domain"</span>;</span></div>
                         <div className="code-line"><span className="line-num">2</span><span></span></div>
@@ -77,7 +77,7 @@ const ArchitectureModal = ({ isOpen, onClose }) => {
                     </div>
 
                     <h2 className="glitch-hover" data-text="Domain-Driven Design">Domain-Driven Design</h2>
-                    <p className="arch-desc">> Modelado profundo del negocio en el código.</p>
+                    <p className="arch-desc">> Modelado profundo del negocio en el cï¿½digo.</p>
                     <div className="arch-details" style={{marginBottom: '2rem'}}>
                         <div className="code-line"><span className="line-num">1</span><span><span className="code-comment">// Bounded Contexts y Ubiquitous Language</span></span></div>
                         <div className="code-line"><span className="line-num">2</span><span><span className="code-keyword">const</span> aggregateRoot = <span className="code-keyword">new</span> Aggregate();</span></div>
@@ -85,11 +85,11 @@ const ArchitectureModal = ({ isOpen, onClose }) => {
                     </div>
 
                     <h2 className="glitch-hover" data-text="Sistemas Core & ERP">Sistemas Core & ERP</h2>
-                    <p className="arch-desc">> Diseño para alta transaccionalidad y consistencia (ACID).</p>
+                    <p className="arch-desc">> Diseï¿½o para alta transaccionalidad y consistencia (ACID).</p>
                     <div className="arch-details">
                         <div className="code-line"><span className="line-num">1</span><span><span className="code-keyword">async function</span> processTransaction() { '{' }</span></div>
                         <div className="code-line"><span className="line-num">2</span><span style={{paddingLeft:'20px'}}><span className="code-keyword">await</span> db.transaction(<span className="code-keyword">async</span> (trx) => { '{' }</span></div>
-                        <div className="code-line"><span className="line-num">3</span><span style={{paddingLeft:'40px'}}><span className="code-comment">// Bloqueo optimista / pesimista y logs de auditoría</span></span></div>
+                        <div className="code-line"><span className="line-num">3</span><span style={{paddingLeft:'40px'}}><span className="code-comment">// Bloqueo optimista / pesimista y logs de auditorï¿½a</span></span></div>
                         <div className="code-line"><span className="line-num">4</span><span style={{paddingLeft:'40px'}}><span className="code-keyword">await</span> updateBalances(trx);</span></div>
                         <div className="code-line"><span className="line-num">5</span><span style={{paddingLeft:'20px'}}>{ '}' });</span></div>
                         <div className="code-line"><span className="line-num">6</span><span>{ '}' }</span></div>
@@ -112,7 +112,7 @@ import ArchitectureModal from './ArchitectureModal';
 
 const Hero = () => {
     const [typedText, setTypedText] = useState('');
-    const fullText = "BACKEND ENGINEER • FULL STACK DEVELOPER";
+    const fullText = "BACKEND ENGINEER ï¿½ FULL STACK DEVELOPER";
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
@@ -132,10 +132,10 @@ const Hero = () => {
             <div className="hero-grid">
                 <div style={{ padding: '2rem' }}>
                     <div className="text-1" style={{ fontSize: '1.2rem', color: '#8b949e', marginBottom: '0.5rem', fontWeight: 600 }}>Hola, soy</div>
-                    <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="David Julio R." style={{ 
+                    <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="Jesus David Julio Romero." style={{ 
                         fontSize: '4.5rem', fontWeight: '900', letterSpacing: '-0.04em', lineHeight: '1.1', margin: '0 0 1.5rem 0'
                     }}>
-                        David Julio R.
+                        Jesus David Julio Romero.
                     </h1>
                     <div className="text-3 hero-text-animate hero-text-delay-2" style={{ 
                         fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'monospace'

@@ -41,14 +41,14 @@ const Hero = () => {
                 <div style={{ padding: '2rem' }}>
                     <div className="text-1" style={{ fontSize: '1.2rem', color: '#8b949e', marginBottom: '0.5rem', fontWeight: 600 }}>Hola, soy</div>
                     
-                    <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="David Julio R." style={{ 
+                    <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="Jesus David Julio Romero." style={{ 
                         fontSize: '4.5rem', 
                         fontWeight: '900', 
                         letterSpacing: '-0.04em',
                         lineHeight: '1.1',
                         margin: '0 0 1.5rem 0'
                     }}>
-                        David Julio R.
+                        Jesus David Julio Romero.
                     </h1>
                     
                     <div className="text-3 hero-text-animate hero-text-delay-2" style={{ 

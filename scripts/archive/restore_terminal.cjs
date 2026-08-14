@@ -33,7 +33,7 @@ const terminalCode = `
                         </div>
                         <div className="code-line">
                             <span className="line-num">5</span>
-                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene más código,"</span></span>
+                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene mas codigo,"</span></span>
                         </div>
                         <div className="code-line">
                             <span className="line-num">6</span>
