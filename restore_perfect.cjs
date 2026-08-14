@@ -1,4 +1,21 @@
-import React, { useState, useEffect } from 'react';
+const fs = require('fs');
+
+// 1. Remove ArchitectureSection completely
+const archSecPath = 'C:/Mis_Proyectos(github)/malet-n/src/components/ArchitectureSection.jsx';
+if (fs.existsSync(archSecPath)) {
+    fs.unlinkSync(archSecPath);
+}
+
+// 2. Clean App.jsx properly
+const appPath = 'C:/Mis_Proyectos(github)/malet-n/src/App.jsx';
+let appCode = fs.readFileSync(appPath, 'utf8');
+appCode = appCode.replace(/import ArchitectureSection from ['"].\/components\/ArchitectureSection['"];?\s*/g, '');
+appCode = appCode.replace(/<ArchitectureSection \/>\s*/g, '');
+fs.writeFileSync(appPath, appCode, 'utf8');
+
+// 3. Rewrite Hero.jsx to have the terminal and the button pointing to #projects
+const heroPath = 'C:/Mis_Proyectos(github)/malet-n/src/components/Hero.jsx';
+const heroCode = `import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     const [typedText, setTypedText] = useState('');
@@ -45,7 +62,9 @@ const Hero = () => {
                         {typedText}<span className="typing-cursor"></span>
                     </div>
 
-                    
+                    <a href="#projects" className="cta-btn glitch-hover animated-btn" data-text="Explorar Arquitecturas">
+                        Explorar Arquitecturas
+                    </a>
                 </div>
 
                 {/* Right Side: Terminal / Philosophy */}
@@ -77,7 +96,7 @@ const Hero = () => {
                         </div>
                         <div className="code-line">
                             <span className="line-num">5</span>
-                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene m�s c�digo,"</span></span>
+                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene mas codigo,"</span></span>
                         </div>
                         <div className="code-line">
                             <span className="line-num">6</span>
@@ -104,3 +123,6 @@ const Hero = () => {
 }
 
 export default Hero;
+`;
+fs.writeFileSync(heroPath, heroCode, 'utf8');
+console.log("Restored perfectly");

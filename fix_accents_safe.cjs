@@ -1,4 +1,7 @@
-import React from 'react';
+const fs = require('fs');
+
+const aboutPath = 'C:/Mis_Proyectos(github)/malet-n/src/components/About.jsx';
+let aboutCode = `import React from 'react';
 
 function About() {
     return (
@@ -29,3 +32,7 @@ function About() {
 }
 
 export default About;
+`;
+
+fs.writeFileSync(aboutPath, aboutCode, 'utf8');
+console.log("About.jsx rewritten with HTML entities to guarantee no encoding issues.");

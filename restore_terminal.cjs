@@ -1,53 +1,9 @@
-import React, { useState, useEffect } from 'react';
+const fs = require('fs');
 
-const Hero = () => {
-    const [typedText, setTypedText] = useState('');
-    const fullText = "BACKEND ENGINEER ï¿½ FULL STACK DEVELOPER";
+const heroPath = 'C:/Mis_Proyectos(github)/malet-n/src/components/Hero.jsx';
+let heroCode = fs.readFileSync(heroPath, 'utf8');
 
-    useEffect(() => {
-        let i = 0;
-        const typingId = setInterval(() => {
-            setTypedText(fullText.slice(0, i));
-            i++;
-            if (i > fullText.length) {
-                clearInterval(typingId);
-            }
-        }, 100);
-        return () => clearInterval(typingId);
-    }, []);
-
-    return (
-        <section className="home" id="home" style={{ position: 'relative', zIndex: 1, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-            <div className="hero-grid">
-                
-                {/* Left Side: Impact Title & CTA */}
-                <div style={{ padding: '2rem' }}>
-                    <div className="text-1" style={{ fontSize: '1.2rem', color: '#8b949e', marginBottom: '0.5rem', fontWeight: 600 }}>Hola, soy</div>
-                    
-                    <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="David Julio R." style={{ 
-                        fontSize: '4.5rem', 
-                        fontWeight: '900', 
-                        letterSpacing: '-0.04em',
-                        lineHeight: '1.1',
-                        margin: '0 0 1.5rem 0'
-                    }}>
-                        David Julio R.
-                    </h1>
-                    
-                    <div className="text-3 hero-text-animate hero-text-delay-2" style={{ 
-                        fontSize: '1.2rem', 
-                        color: 'var(--primary-color)',
-                        fontWeight: '600',
-                        letterSpacing: '0.05em',
-                        textTransform: 'uppercase',
-                        fontFamily: 'monospace'
-                    }}>
-                        {typedText}<span className="typing-cursor"></span>
-                    </div>
-
-                    
-                </div>
-
+const terminalCode = `
                 {/* Right Side: Terminal / Philosophy */}
                 <div className="terminal-window tilt-card" style={{ maxWidth: '600px', width: '100%' }}>
                     <div className="terminal-header">
@@ -77,7 +33,7 @@ const Hero = () => {
                         </div>
                         <div className="code-line">
                             <span className="line-num">5</span>
-                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene mï¿½s cï¿½digo,"</span></span>
+                            <span style={{ paddingLeft: '40px' }}><span className="code-comment">// "El mejor software no es el que tiene más código,"</span></span>
                         </div>
                         <div className="code-line">
                             <span className="line-num">6</span>
@@ -97,10 +53,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+`;
 
-            </div>
-        </section>
-    )
-}
+// Insert the terminal code right before the closing div of hero-grid
+heroCode = heroCode.replace(
+    /<\/div>\s*<\/div>\s*<ArchitectureModal/g,
+    `</div>\n${terminalCode}\n            </div>\n            <ArchitectureModal`
+);
 
-export default Hero;
+fs.writeFileSync(heroPath, heroCode, 'utf8');
+console.log("Restored terminal in Hero.jsx");

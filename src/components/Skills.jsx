@@ -1,13 +1,13 @@
 function Skills() {
     const skills = [
-        { name: 'HTML' },
-        { name: 'CSS' },
-        { name: 'JavaScript' },
-        { name: 'React' },
-        { name: 'TypeScript' },
-        { name: 'Tailwind CSS' },
-        { name: 'Docker' },
-        { name: 'PostgreSQL' }
+        { name: 'Go (Golang)' },
+        { name: 'Python / FastAPI' },
+        { name: 'Node.js / Next.js' },
+        { name: 'PostgreSQL / Prisma' },
+        { name: 'Docker & AWS' },
+        { name: 'React 19 / TypeScript' },
+        { name: 'Clean Architecture' },
+        { name: 'APIs RESTful' }
     ]
 
     return (
@@ -16,14 +16,12 @@ function Skills() {
                 <div className="title"><span>Mis habilidades</span></div>
                 <div className="skills-details">
                     <div className="text">
-                        <div className="topic">Crecimiento y Aprendizaje</div>
+                        <div className="topic">Ecosistema y Arquitectura</div>
                         <p>
-                            Mi stack tecnológico es la base de mi aprendizaje estratégico.
-                            Me enfoco en dominar profundamente el ecosistema de JavaScript para crear interfaces
-                            interactivas y backends eficientes.
-                            Estoy en constante exploración de nuevas librerías y frameworks, perfeccionando mi capacidad para
-                            resolver problemas y optimizar procesos, siempre con la curiosidad de descubrir cómo llevar mis
-                            habilidades al siguiente nivel.
+                            Construyo software escalable, mantenible y orientado a resolver problemas reales de negocio.
+                            Mi stack tecnológico se centra en lenguajes robustos para lógicas de negocio críticas (Go, Python) y
+                            soluciones Frontend modernas (React 18/19, Next.js).
+                            Manejo bases de datos avanzadas optimizando consultas en PostgreSQL e implemento despliegues con Docker y AWS.
                         </p>
                     </div>
                     <div className="boxes">
