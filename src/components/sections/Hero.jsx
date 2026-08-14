@@ -18,11 +18,11 @@ const Hero = () => {
 
     return (
         <section className="home" id="home" style={{ position: 'relative', zIndex: 1, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-            <div className="hero-grid">
+            <article className="hero-grid">
                 
                 {/* Left Side: Impact Title & CTA */}
-                <div style={{ padding: '2rem' }}>
-                    <div className="text-1" style={{ fontSize: '1.2rem', color: '#8b949e', marginBottom: '0.5rem', fontWeight: 600 }}>Hola, soy</div>
+                <header className="hero-content">
+                    <p className="text-1 subtitle">Hola, soy</p>
                     
                     <h1 className="text-2 text-gradient glitch-hover hero-text-animate hero-text-delay-1" data-text="David Julio R." style={{ 
                         fontSize: '4.5rem', 
@@ -34,7 +34,7 @@ const Hero = () => {
                         David Julio R.
                     </h1>
                     
-                    <div className="text-3 hero-text-animate hero-text-delay-2" style={{ 
+                    <h2 className="text-3 hero-text-animate hero-text-delay-2" style={{ 
                         fontSize: '1.2rem', 
                         color: 'var(--primary-color)',
                         fontWeight: '600',
@@ -43,22 +43,22 @@ const Hero = () => {
                         fontFamily: 'monospace'
                     }}>
                         {typedText}<span className="typing-cursor"></span>
-                    </div>
+                    </h2>
 
                     
-                </div>
+                </header>
 
                 {/* Right Side: Terminal / Philosophy */}
-                <div className="terminal-window tilt-card" style={{ maxWidth: '600px', width: '100%' }}>
-                    <div className="terminal-header">
-                        <div className="terminal-buttons">
+                <figure className="terminal-window tilt-card" style={{ maxWidth: '600px', width: '100%' }}>
+                    <header className="terminal-header">
+                        <nav className="terminal-buttons">
                             <span className="terminal-btn btn-red"></span>
                             <span className="terminal-btn btn-yellow"></span>
                             <span className="terminal-btn btn-green"></span>
-                        </div>
-                        <div className="terminal-title">~/philosophy.ts</div>
-                    </div>
-                    <div className="terminal-body">
+                        </nav>
+                        <span className="terminal-title">~/philosophy.ts</span>
+                    </header>
+                    <section className="terminal-body">
                         <div className="code-line">
                             <span className="line-num">1</span>
                             <span><span className="code-keyword">import</span> { '{ CleanArchitecture, DDD }' } <span className="code-keyword">from</span> <span className="code-string">'@principles'</span>;</span>
@@ -95,10 +95,9 @@ const Hero = () => {
                             <span className="line-num">9</span>
                             <span>{ '}' }</span>
                         </div>
-                    </div>
-                </div>
-
-            </div>
+                    </section>
+                </figure>
+            </article>
         </section>
     )
 }

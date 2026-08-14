@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import MatrixBackground from './components/MatrixBackground'
+import Navbar from './components/layout/Navbar'
+import Hero from './components/sections/Hero'
+import About from './components/sections/About'
+import Skills from './components/sections/Skills'
+import Projects from './components/sections/Projects'
+import Contact from './components/sections/Contact'
+import Footer from './components/layout/Footer'
+import ScrollToTop from './components/layout/ScrollToTop'
+import MatrixBackground from './components/effects/MatrixBackground'
 
 function App() {
 
